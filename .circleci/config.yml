@@ -6,7 +6,7 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
 jobs:
-  My pipeline id is << pipeline.id >> and my git branch is << pipeline.git.branch >>.
+  
   print_hello:
     docker: 
      - image: circleci/node:13.8.0
@@ -16,6 +16,7 @@ jobs:
           command: |
             echo "hello"
             echo "bob"
+            run: echo "This is pipeline ID << pipeline.id >>"
 
   print_world:
     docker:
