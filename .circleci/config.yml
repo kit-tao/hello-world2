@@ -27,7 +27,7 @@ jobs:
           command: |
             echo "hello"
             echo "bob Joe"
-            echo "$MY_NAME"
+            echo $MY_NAME
 
 
 workflows:
@@ -36,3 +36,5 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+      - print_hello
+      - print_world
