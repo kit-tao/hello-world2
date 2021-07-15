@@ -25,9 +25,13 @@ jobs:
       - run: 
           name: The second step
           command: |
-            echo "hello"
+            echo "hello world output to file" > /tmp/output.txt
             echo "bob Joe"
             echo $MY_NAME
+      - persist_to_workspace:
+            root: /tmp
+            paths:
+                - "output.txt"
 
 
 workflows:
