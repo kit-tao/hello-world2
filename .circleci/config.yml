@@ -28,10 +28,11 @@ jobs:
             echo "hello world output to file" > ~/output.txt
             echo "bob Joe"
             echo $MY_NAME
+            cat ~/output.txt
       - persist_to_workspace:
             root: ~/
             paths:
-                - output.txt
+              - output.txt
 
   print_output:
     docker:
