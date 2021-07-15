@@ -25,11 +25,11 @@ jobs:
       - run: 
           name: The second step
           command: |
-            echo "hello world output to file" > /tmp/output.txt
+            echo "hello world output to file" > ~/output.txt
             echo "bob Joe"
             echo $MY_NAME
       - persist_to_workspace:
-            root: /tmp
+            root: ~/
             paths:
                 - "output.txt"
 
@@ -38,8 +38,8 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
-          at: /tmp/workspace
-      - run: cat /tmp/output.txt
+          at: ~/
+      - run: cat ~output.txt
 
 workflows:
   # Name the workflow "welcome"
