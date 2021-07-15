@@ -41,7 +41,11 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: cat ~/output.txt
+      - run: 
+          name: some commands
+          command: |
+            ls -l ~/
+            cat ~/output.txt
 
 workflows:
   # Name the workflow "welcome"
