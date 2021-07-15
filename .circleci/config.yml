@@ -29,6 +29,7 @@ jobs:
             echo "bob Joe"
             echo $MY_NAME
             cat ~/output.txt
+            ls ~/
       - persist_to_workspace:
             root: ~/
             paths:
