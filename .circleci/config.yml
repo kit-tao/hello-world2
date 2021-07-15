@@ -11,7 +11,11 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
 jobs:
-  
+  print_pipeline_output:
+    docker: 
+     - image: circleci/node:13.8.0
+    steps:
+      - print_pipeline_output
   print_hello:
     docker: 
      - image: circleci/node:13.8.0
