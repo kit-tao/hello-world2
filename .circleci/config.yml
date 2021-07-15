@@ -27,6 +27,7 @@ jobs:
           command: |
             echo "hello"
             echo "bob Joe"
+            echo "$MY_NAME"
 
 
 workflows:
