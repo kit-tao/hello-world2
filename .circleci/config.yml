@@ -36,13 +36,10 @@ jobs:
   print_output:
     docker:
       - image: circleci/node:13.8.0
-      steps:
-        - attach_workspace:
+    steps:
+      - attach_workspace:
           at: /tmp/workspace
-        - run:
-          name: Read "output.txt"
-          command: 
-            cat /tmp/output.txt
+      - run: cat /tmp/output.txt
 
 workflows:
   # Name the workflow "welcome"
@@ -52,3 +49,4 @@ workflows:
       - welcome/run
       - print_hello
       - print_world
+      - print_output
