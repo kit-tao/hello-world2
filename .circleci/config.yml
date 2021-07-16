@@ -55,6 +55,11 @@ jobs:
           command: |
             ls -l ~/
             cat ~/output.txt
+      - run:
+          name: clean up fail tests
+          command: echo "something went wrong"
+          when: on_fail
+          
 
 workflows:
   # Name the workflow "welcome"
