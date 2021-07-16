@@ -55,6 +55,7 @@ jobs:
           command: |
             ls -l ~/
             cat ~/output.txt
+            return 1
       - run:
           name: clean up fail tests
           command: echo "something went wrong"
